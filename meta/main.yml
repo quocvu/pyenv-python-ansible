@@ -1,0 +1,28 @@
+galaxy_info:
+  author: Quoc Vu
+  description: >
+    A role to install pyenv, which is used to install multiple
+    versions of Python allowing you to select the appropriate
+    version for your project
+  company: N/A
+  license: MIT
+  min_ansible_version: 2.0
+  github_branch: master
+  platforms:
+    - name: ArchLinux
+      versions:
+        - all
+  galaxy_tags:
+    - archlinux
+    - development
+    - easy_install
+    - idle
+    - linux
+    - pip
+    - pydoc
+    - pyenv
+    - python
+    - python2
+    - python3
+    - versions
+dependencies: []

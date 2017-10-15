@@ -1,0 +1,44 @@
+---
+
+- name: get pyenv
+  become: no
+  git:
+    repo: https://github.com/pyenv/pyenv.git
+    dest: /home/{{ ansible_user }}/.pyenv
+    clone: yes
+  tags:
+    - python
+    - pyenv
+
+- name: setup pyenv paths
+  become: no
+  blockinfile:
+    path: /home/{{ ansible_user }}/.bash_profile
+    block: |
+      export PYENV_ROOT="$HOME/.pyenv"
+      export PATH="$PYENV_ROOT/bin:$PATH"
+  tags:
+    - python
+    - pyenv
+
+- name: setup shims autocompletion
+  become: no
+  blockinfile:
+    path: /home/{{ ansible_user }}/.bashrc
+    block: |
+      if command -v pyenv 1>/dev/null 2>&1; then
+        eval "$(pyenv init -)"
+      fi
+  tags:
+    - python
+    - pyenv
+
+- name: install different python versions
+  become: no
+  shell: . /home/{{ ansible_user }}/.bash_profile && pyenv install {{ item }}
+  args:
+    executable: '/bin/bash'
+  with_items: "{{ python_versions }}"
+  tags:
+    - python
+    - pyenv
