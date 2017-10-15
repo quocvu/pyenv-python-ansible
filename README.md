@@ -1,4 +1,6 @@
 [![Build Status](https://img.shields.io/travis/quocvu/pyenv-python-ansible.svg)](https://travis-ci.org/quocvu/pyenv-python-ansible)
+[![Ansible Role](https://img.shields.io/ansible/role/21219.svg)](https://galaxy.ansible.com/quocvu/pyenv-python)
+
 
 pyenv-python
 ================
