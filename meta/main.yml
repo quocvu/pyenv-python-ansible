@@ -9,11 +9,54 @@ galaxy_info:
   min_ansible_version: 2.0
   github_branch: master
   platforms:
+    - name: Alpine
+      versions:
+        - all
     - name: ArchLinux
       versions:
         - all
+    - name: Debian
+      versions:
+        - all
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: FreeBSD
+      versions:
+        - all
+    - name: GenericLinux
+      versions:
+        - all
+    - name: MacOSX
+      versions:
+       - all
+    - name: OpenBSD
+      versions:
+       - all
+    - name: opensuse
+      versions:
+       - all
+    - name: Ubuntu
+      versions:
+        - all
   galaxy_tags:
+    - alpine
     - archlinux
+    - debian
+    - fedora
+    - freebsd
+    - genericlinux
+    - macosx
+    - mac
+    - osx
+    - openbsd
+    - opensuse
+    - bsd
+    - suse
+    - ubuntu
     - development
     - easy_install
     - idle
